@@ -1,0 +1,21 @@
+body{
+  margin: 0 auto;
+}
+
+.container {
+  background-color: #FFF7EE;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+  margin: 0 auto;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+}
+
+#canvas {
+  background: #34393E;
+}
