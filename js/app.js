@@ -73,6 +73,7 @@ window.onload = function() {
   var leftPressed = false;
   document.addEventListener("keydown", keyDownHandler, false);
   document.addEventListener("keyup", keyUpHandler, false);
+  document.addEventListener("mousemove", mouseMoveHandler, false);
 
   function keyDownHandler(e) {
       e.preventDefault();
@@ -94,20 +95,35 @@ window.onload = function() {
         }
     }
 
-    // Collision Detection
-    function collisionDetection(){
-      for(col=0; col<brickColumns; col++){
-        for(row=0;row<brickRows;row++){
-          var b = bricks[col][row];
-          if(b.status == 1){
-            if(x> b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight){
-              dy = -dy;
-              b.status = 0;
+    function mouseMoveHandler(e) {
+      var relativeX = e.clientX - canvas.offsetLeft;
+      if(relativeX > 0 && relativeX < canvas.width) {
+        paddleX = relativeX - paddleWidth/2;
+      }
+    }
+
+  // Collision Detection
+  function collisionDetection(){
+    for(col=0; col<brickColumns; col++){
+      for(row=0;row<brickRows;row++){
+        var b = bricks[col][row];
+        if(b.status == 1){
+          if(x> b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight){
+            dy = -dy;
+            b.status = 0;
+            $score += 100;
+            if($score == brickRows*brickColumns){
+              alert("You win, congratlutions!");
+              document.location.reload();
             }
           }
         }
       }
     }
+  }
+
+  // Count Score
+  var $score = 0;
 
   // Render the gameboard & elements
   function draw() {
