@@ -9,7 +9,9 @@ window.onload = function() {
   var dx = 2;
   var dy = -2;
   // var dx = Math.floor(Math.random()*3);
+  //
   // var dy = -1*Math.floor(Math.random()*3);
+  // console.log(dx dy);
 
   // Game Play Variables
   var $score = 0;
@@ -148,6 +150,7 @@ window.onload = function() {
     }
     else if(y + dy > canvas.height-ballRadius) {
       if(x > paddleX && x < paddleX + paddleWidth){
+        dx = 8 * ((x-(paddleX+paddleWidth/2))/paddleWidth);
         dy = -dy;
       }
       else {
