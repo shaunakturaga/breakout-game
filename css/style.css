@@ -20,6 +20,24 @@ body{
 .statistics{
   width: 768px;
   margin: 0 auto;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+#score {
+  margin-left: 40px;
+}
+
+#lives {
+  margin-left: 466px;
+}
+
+.life-square {
+  background-color: #88D936;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  margin-top: 1px;
 }
 
 #canvas {

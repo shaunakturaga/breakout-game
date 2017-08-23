@@ -149,8 +149,8 @@ window.onload = function() {
   function drawPauseAlert() {
     ctx.beginPath();
     ctx.fillStyle = "FFF7EE";
-    ctx.font = '48px';
-    ctx.fillText('P a u s e d', canvas.width-60, canvas.height-20);
+    ctx.fillText('P a u s e d', canvas.width/2-20, canvas.height/2);
+    ctx.font(100);
     ctx.fill();
     ctx.closePath();
   }
@@ -183,6 +183,7 @@ window.onload = function() {
       else {
         lives--;
         $('#lives').text(`Lives: ${lives}`);
+        // $('.life-square').last().removeClass('.life-square');
         if(!lives){
           alert("GAME OVER");
           document.location.reload();
@@ -193,6 +194,7 @@ window.onload = function() {
           dx = 0;
           dy = 0;
           paddleX = (canvas.width-paddleWidth)/2;
+          $('.title').addClass("animate tada");
           setTimeout(function(){
             dx = 0;
             dy = 2;

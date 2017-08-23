@@ -5,10 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Shaunak</title>
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.12/p5.js"></script> -->
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="bower_components/sweetalert2/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="css/smoke.css">
+
 </head>
 <body>
   <div class="container">
@@ -19,11 +20,14 @@
       <div id="level">Level: 0</div>
       <div id="score">Score: 0</div>
       <div id="lives">Lives:</div>
+      <div class="animated pulse infinite life-square"></div>
+      <div class="animated pulse infinite life-square"></div>
+      <div class="animated pulse infinite life-square"></div>
     </div>
     <canvas id="canvas" width="768" height="527"></canvas>
   </div>
 
   <script src="js/app.js" charset="utf-8"></script>
-  <script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+  <script src="js/smoke.js" charset="utf-8"></script>
 </body>
 </html>
