@@ -18,9 +18,8 @@ body{
 }
 
 .statistics{
-  display: flex;
-  flex-direction: row;
-  text-align: center;
+  width: 768px;
+  margin: 0 auto;
 }
 
 #canvas {

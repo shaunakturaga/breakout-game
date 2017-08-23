@@ -8,6 +8,14 @@ window.onload = function() {
   var y = canvas.height-30;
   var dx = 2;
   var dy = -2;
+  // var dx = Math.floor(Math.random()*3);
+  // var dy = -1*Math.floor(Math.random()*3);
+
+  // Game Play Variables
+  var $score = 0;
+  var lives = 3;
+  $('#lives').text(`Lives: ${lives}`);
+  var hit = new Audio('Beep2.wav');
 
   // Render the ball
   var ballRadius = 10;
@@ -110,8 +118,10 @@ window.onload = function() {
         if(b.status == 1){
           if(x> b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight){
             dy = -dy;
+            hit.play();
             b.status = 0;
             $score += 100;
+            $('#score').text(`Score: ${$score}`);
             if($score == brickRows*brickColumns){
               alert("You win, congratlutions!");
               document.location.reload();
@@ -121,9 +131,6 @@ window.onload = function() {
       }
     }
   }
-
-  // Count Score
-  var $score = 0;
 
   // Render the gameboard & elements
   function draw() {
@@ -144,8 +151,19 @@ window.onload = function() {
         dy = -dy;
       }
       else {
-        alert("GAME OVER");
-        document.location.reload();
+        lives--;
+        $('#lives').text(`Lives: ${lives}`);
+        if(!lives){
+          alert("GAME OVER");
+          document.location.reload();
+        }
+        else {
+          x = canvas.width/2;
+          y = canvas.height-30;
+          dx = 2;
+          dx = -2;
+          paddleX = (canvas.width-paddleWidth)/2;
+        }
       }
     }
 
@@ -158,6 +176,9 @@ window.onload = function() {
 
     x += dx;
     y +=dy;
+
+    // requestAnimationFrame(draw);
   }
+  // draw();
   setInterval(draw, 10);
 }
