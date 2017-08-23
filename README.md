@@ -1,2 +1,2 @@
-# breakout-game
-This is a fun little game of breakout that I created
+# Breakout
+This is a fun breakout game that I 

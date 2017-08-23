@@ -5,13 +5,9 @@ window.onload = function() {
 
   // Position variables
   var x = canvas.width/2;
-  var y = canvas.height-30;
-  var dx = 2;
-  var dy = -2;
-  // var dx = Math.floor(Math.random()*3);
-  //
-  // var dy = -1*Math.floor(Math.random()*3);
-  // console.log(dx dy);
+  var y = canvas.height-250;
+  var dx = 0;
+  var dy = 2;
 
   // Game Play Variables
   var $score = 0;
@@ -81,6 +77,7 @@ window.onload = function() {
   // User control
   var rightPressed = false;
   var leftPressed = false;
+
   document.addEventListener("keydown", keyDownHandler, false);
   document.addEventListener("keyup", keyUpHandler, false);
   document.addEventListener("mousemove", mouseMoveHandler, false);
@@ -124,7 +121,7 @@ window.onload = function() {
             b.status = 0;
             $score += 100;
             $('#score').text(`Score: ${$score}`);
-            if($score == brickRows*brickColumns){
+            if($score/100 == brickRows*brickColumns){
               alert("You win, congratlutions!");
               document.location.reload();
             }
@@ -134,8 +131,38 @@ window.onload = function() {
     }
   }
 
+  // Add pause functionality
+  var paused = false;
+  var alertWidth = 75;
+  var alertHeight = 50;
+  document.addEventListener("keydown", pauseGame, false);
+
+  function pauseGame(e) {
+    e.preventDefault();
+    if(e.keyCode == 80){
+      paused = !paused;
+    } else if(e.keyCode == 27) {
+      paused = !paused;
+    }
+  }
+
+  function drawPauseAlert() {
+    ctx.beginPath();
+    ctx.fillStyle = "FFF7EE";
+    ctx.font = '48px';
+    ctx.fillText('P a u s e d', canvas.width-60, canvas.height-20);
+    ctx.fill();
+    ctx.closePath();
+  }
+
+
   // Render the gameboard & elements
   function draw() {
+    if(paused){
+      drawPauseAlert();
+      return;
+    }
+
     ctx.clearRect(0,0,canvas.width, canvas.height);
     drawBricksField();
     drawPaddle();
@@ -150,7 +177,7 @@ window.onload = function() {
     }
     else if(y + dy > canvas.height-ballRadius) {
       if(x > paddleX && x < paddleX + paddleWidth){
-        dx = 8 * ((x-(paddleX+paddleWidth/2))/paddleWidth);
+        dx = 7 * ((x-(paddleX+paddleWidth/2))/paddleWidth);
         dy = -dy;
       }
       else {
@@ -162,10 +189,14 @@ window.onload = function() {
         }
         else {
           x = canvas.width/2;
-          y = canvas.height-30;
-          dx = 2;
-          dx = -2;
+          y = canvas.height-200;
+          dx = 0;
+          dy = 0;
           paddleX = (canvas.width-paddleWidth)/2;
+          setTimeout(function(){
+            dx = 0;
+            dy = 2;
+          },1000);
         }
       }
     }
