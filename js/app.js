@@ -12,8 +12,10 @@ window.onload = function() {
   // Game Play Variables
   var $score = 0;
   var lives = 3;
-  $('#lives').text(`Lives: ${lives}`);
   var hit = new Audio('Beep2.wav');
+
+  // $('#lives').text(`Lives: ${lives}`);
+
 
   // Render the ball
   var ballRadius = 10;
@@ -131,6 +133,17 @@ window.onload = function() {
     }
   }
 
+  // Draw Game Indicators
+  // function gameElements(){
+  //   $("<div>").attr("id","level").text("Level: 0").appendTo($(".statistics"));
+  //   $("<div>").attr("id","score").text("Score: 0").appendTo($(".statistics"));
+  //   $("<div>").attr("id","lives").text("Level:").appendTo($(".statistics"));
+  //
+  //   $("<div>").addClass("animated pulse infinite life-square").appendTo($(".statistics"));
+  //   $("<div>").addClass("animated pulse infinite life-square").appendTo($(".statistics"));
+  //   $("<div>").addClass("animated pulse infinite life-square").appendTo($(".statistics"));
+  // }
+
   // Add pause functionality
   var paused = false;
   var alertWidth = 75;
@@ -150,7 +163,6 @@ window.onload = function() {
     ctx.beginPath();
     ctx.fillStyle = "FFF7EE";
     ctx.fillText('P a u s e d', canvas.width/2-20, canvas.height/2);
-    ctx.font(100);
     ctx.fill();
     ctx.closePath();
   }
@@ -164,6 +176,7 @@ window.onload = function() {
     }
 
     ctx.clearRect(0,0,canvas.width, canvas.height);
+    // gameElements();
     drawBricksField();
     drawPaddle();
     createBall();
@@ -182,8 +195,8 @@ window.onload = function() {
       }
       else {
         lives--;
-        $('#lives').text(`Lives: ${lives}`);
-        // $('.life-square').last().removeClass('.life-square');
+        // $('#lives').text(`Lives: ${lives}`);
+        $('.life-square').last().remove();
         if(!lives){
           alert("GAME OVER");
           document.location.reload();
@@ -216,5 +229,13 @@ window.onload = function() {
     // requestAnimationFrame(draw);
   }
   // draw();
-  setInterval(draw, 10);
+  function startGame () {
+    $('#start').on("click", function() {
+      $('#start').removeClass("infinite").addClass("animate bounceOut");
+      setTimeout(setInterval(draw,10), 1000);
+    });
+  }
+
+  startGame();
+  // setInterval(draw, 10);
 }

@@ -1,5 +1,6 @@
 body{
   margin: 0 auto;
+  /*cursor: none;*/
 }
 
 .container {
@@ -25,11 +26,17 @@ body{
 }
 
 #score {
-  margin-left: 40px;
+  width: 125px;
+  margin-left: 30px;
 }
 
 #lives {
-  margin-left: 466px;
+  margin-left: 415px;
+}
+
+#canvas {
+  background: #34393E;
+  position: relative;
 }
 
 .life-square {
@@ -40,6 +47,16 @@ body{
   margin-top: 1px;
 }
 
-#canvas {
-  background: #34393E;
+#start {
+  width: 162px;
+  height: 44px;
+  background-color: #F1A94E;
+  position: absolute;
+  left: 46%;
+  bottom: 50%;
+  z-index: 1;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 44px;
+  color: #34393E;
 }
