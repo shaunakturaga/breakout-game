@@ -61,3 +61,8 @@ body{
   line-height: 44px;
   color: #34393E;
 }
+
+.footer {
+  margin-top: 10px;
+  font-size: 12px;
+}
