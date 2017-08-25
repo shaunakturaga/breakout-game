@@ -1,6 +1,9 @@
 # Breakout
 This is a fun breakout game that I built as part of General Assembly's Project 1 deliverable as part of my Capital One full stack bootcamp. The requirements for the projects were designed to test mastery of all topics covered for Front End Development credentials (HTML/CSS/JS/jQuery/AJAX).
 
+
+![alt text]()
+
 ## Project Overview
 
 The entire game utilizes pure javascript and takes advantage of Web API as part of the browser. More specifically, I was able to render all game components like the ball, paddle, and bricks using canvas tags.
@@ -96,7 +99,7 @@ The rules of the game are quite simple. Start the game by clicking the "Start Ga
 
 First created all my user stories for the game using Trello to implement light project management.
 
-![alt test](https://github.com/shaunakturaga/breakout-game/blob/master/trello.gif)
+![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/trello.gif)
 
 Then I realized my user stories by creating a wireframe in Sketch App. This was useful in creating all wireframe components and knowing exact dimension when rendering the components in JS.
 
