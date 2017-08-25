@@ -98,4 +98,4 @@ Then I realized my user stories by creating a wireframe in Sketch App. This was 
 
 ![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/Breakout%20Main%20Wireframe.png)
 
-![alt text]()
+![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/sketch_screen_capture.gif)
