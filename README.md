@@ -2,7 +2,7 @@
 This is a fun breakout game that I built as part of General Assembly's Project 1 deliverable as part of my Capital One full stack bootcamp. The requirements for the projects were designed to test mastery of all topics covered for Front End Development credentials (HTML/CSS/JS/jQuery/AJAX).
 
 
-![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/trello.gif)
+![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/gameplay.gif)
 
 ## Project Overview
 
