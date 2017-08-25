@@ -2,7 +2,7 @@
 This is a fun breakout game that I built as part of General Assembly's Project 1 deliverable as part of my Capital One full stack bootcamp. The requirements for the projects were designed to test mastery of all topics covered for Front End Development credentials (HTML/CSS/JS/jQuery/AJAX).
 
 
-![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/gameplay.gif)
+![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/readme/gameplay.gif)
 
 ## Project Overview
 
@@ -99,10 +99,10 @@ The rules of the game are quite simple. Start the game by clicking the "Start Ga
 
 First created all my user stories for the game using Trello to implement light project management.
 
-![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/trello.gif)
+![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/readme/trello.gif)
 
 Then I realized my user stories by creating a wireframe in Sketch App. This was useful in creating all wireframe components and knowing exact dimension when rendering the components in JS.
 
-![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/sketch_screen_capture.gif)
+![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/readme/sketch_screen_capture.gif)
 
 I incrementally developed the game by focusing on creating the ball first and ensured that it would bounce around the canvas. Then I was able to create the paddle and move it using the mouse or directional pad. I created a brick field and focused on the aesthics of the game.
