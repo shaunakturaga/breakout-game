@@ -229,11 +229,20 @@ window.onload = function() {
     // requestAnimationFrame(draw);
   }
   // draw();
-  function startGame () {
-    $('#start').on("click", function() {
-      $('#start').removeClass("infinite").addClass("animate bounceOut");
-      setTimeout(setInterval(draw,10), 1000);
-    });
+  // function startGame () {
+  //   $('#start').on("click", function() {
+  //     $('#start').removeClass("infinite").addClass("animate bounceOut");
+  //     setTimeout(setInterval(draw,10), 1000);
+  //   });
+  // }
+  function startGame(){
+    document.addEventListener("keydown", function(e){
+      e.preventDefault();
+      if(e.keyCode === 13){
+        $('#start').removeClass("infinite").addClass("animate bounceOut");
+        setTimeout(setInterval(draw,10), 1000);
+      }
+    })
   }
 
   startGame();
