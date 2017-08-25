@@ -94,6 +94,10 @@ The rules of the game are quite simple. Start the game by clicking the "Start Ga
 
 ## Process of Creation
 
+First created all my user stories for the game using Trello to implement light project management.
+
+![alt test](https://github.com/shaunakturaga/breakout-game/blob/master/trello.gif)
+
 Then I realized my user stories by creating a wireframe in Sketch App. This was useful in creating all wireframe components and knowing exact dimension when rendering the components in JS.
 
 ![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/sketch_screen_capture.gif)
