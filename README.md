@@ -93,7 +93,7 @@ Breakout was a game that I played all the time on older machines growing up like
 
 ## Gameplay
 
-The rules of the game are quite simple. Start the game by clicking the "Start Game" button. As the user, you can use the mouse of left/right arrow keys to move the paddle. You have three lives to destroy all the bricks. The game is won when all the bricks are destroyed.
+The rules of the game are quite simple. Start the game by clicking the "Start Game" button. As the user, you can use the mouse of left/right arrow keys to move the paddle. You have three lives to destroy all the bricks. The game is won when all the bricks are destroyed. You can also pause the game by pressing 'P' or 'ESC'.
 
 ## Process of Creation
 
