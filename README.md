@@ -96,6 +96,4 @@ The rules of the game are quite simple. Start the game by clicking the "Start Ga
 
 Then I realized my user stories by creating a wireframe in Sketch App. This was useful in creating all wireframe components and knowing exact dimension when rendering the components in JS.
 
-![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/Breakout%20Main%20Wireframe.png)
-
 ![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/sketch_screen_capture.gif)
