@@ -101,3 +101,5 @@ First created all my user stories for the game using Trello to implement light p
 Then I realized my user stories by creating a wireframe in Sketch App. This was useful in creating all wireframe components and knowing exact dimension when rendering the components in JS.
 
 ![alt text](https://github.com/shaunakturaga/breakout-game/blob/master/sketch_screen_capture.gif)
+
+I incrementally developed the game by focusing on creating the ball first and ensured that it would bounce around the canvas. Then I was able to create the paddle and move it using the mouse or directional pad. I created a brick field and focused on the aesthics of the game.
