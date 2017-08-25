@@ -61,7 +61,18 @@ body{
   color: #34393E;
 }
 
+#pause {
+  margin-left: 297px;
+}
 .footer {
-  margin-top: 10px;
+  margin-top: 100px;
   font-size: 12px;
+}
+
+.instructions {
+  width: 768px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
 }
