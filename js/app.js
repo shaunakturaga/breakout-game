@@ -12,7 +12,7 @@ window.onload = function() {
   // Game Play Variables
   var $score = 0;
   var lives = 3;
-  var hit = new Audio('Beep2.wav');
+  var hit = new Audio('audio/Beep2.wav');
 
   // $('#lives').text(`Lives: ${lives}`);
 
