@@ -1,6 +1,6 @@
 body{
   margin: 0 auto;
-  /*cursor: none;*/
+
 }
 
 .container {
@@ -37,6 +37,7 @@ body{
 #canvas {
   background: #34393E;
   position: relative;
+  cursor: none;
 }
 
 .life-square {
