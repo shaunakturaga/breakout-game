@@ -76,3 +76,7 @@ body{
   margin-top: 10px;
   display: flex;
 }
+
+#test {
+  width: 0px;
+}
